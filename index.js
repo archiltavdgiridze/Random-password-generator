@@ -4,11 +4,10 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let pass1 = document.getElementById('pass1')
 let pass2 = document.getElementById("pass2");
 
-
 function generatePassword() {
   let password1 = ''
   let password2 = '';
-  for(let i = 0; i < 15; i++) {
+  for(let i = 0; i < slider.value; i++) {
     password1 += characters[Math.floor(Math.random() * characters.length)]
     password2 += characters[Math.floor(Math.random() * characters.length)];
   }
@@ -18,6 +17,15 @@ function generatePassword() {
   pass2.textContent = password2;
 }
 
+let slider = document.getElementById("myRange");
+let output = document.getElementById("slider_num");
+output.innerHTML = slider.value;
+
+slider.oninput = function () {
+  output.innerHTML = this.value;
+};
+
+// Copy generated password to clipboard
 function copyToClipboard(element) {
   var $temp = $("<input>");
   $("body").append($temp);
@@ -42,3 +50,6 @@ const options = {
 
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
+
+
+

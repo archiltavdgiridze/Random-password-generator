@@ -24,6 +24,24 @@
         <div class="subtitle">
           <h2>Never use an insecure password again.</h2>
         </div>
+        <!--  -->
+
+        <div class="slider-wrapper">
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="18"
+              value="1"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+          <p>Number of characters: <span id="slider_num"></span></p>
+        </div>
+
+
+        <!--  -->
         <div class="generateBtn">
           <button id="generate" onclick="generatePassword(), copyContent()">
             Generate passwords
@@ -34,7 +52,7 @@
         <div class="genPassContainer">
           <div class="pass1">
             <div class="generatedPasswords" id="pass1">
-              <p>*generate*</p>
+              <p>password preview</p>
             </div>
             <button class="copyBtn" onclick="copyToClipboard('#pass1')">
               copy
@@ -42,7 +60,7 @@
           </div>
           <div class="pass2">
             <div class="generatedPasswords" id="pass2">
-              <p>*generate*</p>
+              <p>password preview</p>
             </div>
             <button class="copyBtn" onclick="copyToClipboard('#pass2')">
               copy

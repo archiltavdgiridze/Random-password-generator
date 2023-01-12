@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random password generator</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Random password generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="title">
+          <h1>Generate a <br /><span>random password</span></h1>
+        </div>
+        <div class="subtitle">
+          <h2>Never use an insecure password again.</h2>
+        </div>
+        <div class="generateBtn">
+          <button id="generate" onclick="generatePassword(), copyContent()">
+            Generate passwords
+          </button>
+        </div>
+        <hr />
+        <!-- link this divs to js generated passwords -->
+        <div class="genPassContainer">
+          <div class="pass1">
+            <div class="generatedPasswords" id="pass1">
+              <p>*generate*</p>
+            </div>
+            <button class="copyBtn" onclick="copyToClipboard('#pass1')">
+              copy
+            </button>
+          </div>
+          <div class="pass2">
+            <div class="generatedPasswords" id="pass2">
+              <p>*generate*</p>
+            </div>
+            <button class="copyBtn" onclick="copyToClipboard('#pass2')">
+              copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>

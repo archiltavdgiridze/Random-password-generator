@@ -1,0 +1,175 @@
+:root {
+  --darkBodyBG: #1C1C1C;
+  --darkDivBG: #1F2937;
+  --lightDivBG: #cbfce5;
+  --secondaryDivBG: #273549;
+  --accentColor: #10B981;
+  --lightGray: #d5d4d8;
+  --darkGray: #6B7280;
+  --ds: #100f2c;
+   --mainFont: 'Karla', sans-serif;
+
+}
+
+body {
+  background-color: var(--lightGray);
+}
+
+.container {
+  background-color: var(--lightDivBG);
+  width: 550px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  margin: auto;
+}
+
+.content {
+  /* font-family: var(--mainFont); */
+}
+
+.title h1 {
+  font-family: var(--mainFont);
+  color: var(--darkDivBG);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.title h1 span {
+  color: var(--accentColor);
+}
+
+.subtitle h2 {
+  font-family: var(--mainFont);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--darkGray);
+}
+
+.generateBtn button {
+  background-color: var(--accentColor);
+  color: #fff;
+  font-family: var(--mainFont);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 50px 0 36px;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.generateBtn button:hover {
+  background-color: #0ea674;
+}
+
+.genPassContainer {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  margin-top: 36px;
+  gap: 24px;
+}
+
+hr {
+  border: 1px solid var(--secondaryDivBG);
+}
+
+.generatedPasswords {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+
+  font-family: var(--mainFont);
+  font-size: 1.2rem;
+  width: 210px;
+  height: 40px;
+  padding: 0 10px;
+
+  color: var(--accentColor);
+  background-color: var(--secondaryDivBG);
+  border-radius: 6px;
+  border: none;
+}
+
+.pass1,
+.pass2 {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  gap: 10px;
+}
+
+.copyBtn {
+  font-family: var(--mainFont);
+  font-size: 1.2rem;
+  width: 100px;
+  height: 40px;
+  padding: 0 10px;
+
+  color: var(--accentColor);
+  background-color: var(--secondaryDivBG);
+  border-radius: 6px;
+  border: none;
+}
+
+.copyBtn:hover {
+  background-color: var(--accentColor);
+  color: #fff;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    height: 700px;
+
+    margin: 50px auto;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  /* .title h1 {
+    font-size: 3rem;
+  } */
+
+  /* .subtitle h2 {
+    font-size: 1.2rem;
+  } */
+
+  /* .generateBtn button {
+    font-size: 1rem;
+    margin: 50px 0 36px;
+    padding: 0.5rem 0.8rem;
+  } */
+
+  .genPassContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: start; */
+    /* gap: 10px; */
+  }
+
+  .pass1,
+  .pass2 {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+  }
+
+  .generatedPasswords {
+    width: 100%;
+  }
+
+
+}

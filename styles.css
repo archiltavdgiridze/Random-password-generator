@@ -8,7 +8,6 @@
   --darkGray: #6B7280;
   --ds: #100f2c;
   --mainFont: 'Karla', sans-serif;
-
 }
 
 body {
@@ -23,13 +22,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   border-radius: 8px;
   margin: auto;
-}
-
-.content {
-  /* font-family: var(--mainFont); */
 }
 
 .title h1 {
@@ -70,7 +64,6 @@ body {
 
 .genPassContainer {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   margin-top: 36px;
   gap: 24px;
@@ -83,14 +76,11 @@ hr {
 .generatedPasswords {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-
   font-family: var(--mainFont);
   font-size: 1.2rem;
   width: 210px;
   height: 40px;
   padding: 0 10px;
-
   color: var(--accentColor);
   background-color: var(--secondaryDivBG);
   border-radius: 6px;
@@ -101,8 +91,6 @@ hr {
 .pass2 {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
   gap: 10px;
 }
 
@@ -129,7 +117,6 @@ hr {
   .container {
     width: 95%;
     height: 700px;
-
     margin: 50px auto;
   }
 
@@ -137,49 +124,26 @@ hr {
     width: 90%;
   }
 
-  /* .title h1 {
-    font-size: 3rem;
-  } */
-
-  /* .subtitle h2 {
-    font-size: 1.2rem;
-  } */
-
-  /* .generateBtn button {
-    font-size: 1rem;
-    margin: 50px 0 36px;
-    padding: 0.5rem 0.8rem;
-  } */
-
   .genPassContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* justify-content: start; */
-    /* gap: 10px; */
   }
 
   .pass1,
   .pass2 {
     display: flex;
     flex-direction: row;
-
     width: 100%;
   }
 
   .generatedPasswords {
     width: 100%;
   }
-
-
 }
-
-
-/*  */
 
 .slidecontainer {
   width: 100%;
-  /* Width of the outside container */
 }
 
 .slider-wrapper p {
@@ -193,56 +157,37 @@ hr {
   font-weight: 700;
 }
 
-/* The slider itself */
 .slider {
   -webkit-appearance: none;
-  /* Override default CSS styles */
   appearance: none;
   width: 100%;
   border-radius: 100px;
-  /* Full-width */
   height: 25px;
-  /* Specified height */
   background: #d3d3d3;
-  /* Grey background */
   outline: none;
-  /* Remove outline */
   opacity: 0.7;
-  /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s;
-  /* 0.2 seconds transition on hover */
   transition: opacity .2s;
 }
 
-/* Mouse-over effects */
 .slider:hover {
   opacity: 1;
-  /* Fully shown on mouse-over */
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+/* The slider handle */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* Override default look */
   appearance: none;
   width: 25px;
-  /* Set a specific slider handle width */
   height: 25px;
-  /* Slider handle height */
   background: var(--accentColor);
-  /* Green background */
   cursor: pointer;
-  /* Cursor on hover */
   border-radius: 100px;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
-  /* Set a specific slider handle width */
   height: 25px;
-  /* Slider handle height */
   background: #04AA6D;
-  /* Green background */
   cursor: pointer;
-  /* Cursor on hover */
 }

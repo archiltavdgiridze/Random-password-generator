@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:fb="http://ogp.me/ns/fb#"
+>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta data-rh="true" property="og:image" content="./page-preview.png">
-
+    <meta data-rh="true" property="og:image" content="./page-preview.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,8 +28,6 @@
         <div class="subtitle">
           <h2>Never use an insecure password again.</h2>
         </div>
-        <!--  -->
-
         <div class="slider-wrapper">
           <div class="slidecontainer">
             <input
@@ -41,16 +41,12 @@
           </div>
           <p>Number of characters: <span id="slider_num"></span></p>
         </div>
-
-
-        <!--  -->
         <div class="generateBtn">
           <button id="generate" onclick="generatePassword(), copyContent()">
             Generate passwords
           </button>
         </div>
         <hr />
-        <!-- link this divs to js generated passwords -->
         <div class="genPassContainer">
           <div class="pass1">
             <div class="generatedPasswords" id="pass1">
@@ -71,7 +67,6 @@
         </div>
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src="./index.js"></script>
   </body>

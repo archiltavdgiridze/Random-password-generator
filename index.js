@@ -1,9 +1,10 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
+const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
 
+// Password Elements
 let pass1 = document.getElementById('pass1')
 let pass2 = document.getElementById("pass2");
 
+// Generate Password
 function generatePassword() {
   let password1 = ''
   let password2 = '';
@@ -11,12 +12,11 @@ function generatePassword() {
     password1 += characters[Math.floor(Math.random() * characters.length)]
     password2 += characters[Math.floor(Math.random() * characters.length)];
   }
-  console.log(password1)
-  console.log(password2);
   pass1.textContent = password1;
   pass2.textContent = password2;
 }
 
+// Slider
 let slider = document.getElementById("myRange");
 let output = document.getElementById("slider_num");
 output.innerHTML = slider.value;
@@ -34,6 +34,7 @@ function copyToClipboard(element) {
   $temp.remove();
 }
 
+// Dark Mode
 const options = {
   bottom: '64px', // default: '32px'
   right: 'unset', // default: '32px'
@@ -50,6 +51,3 @@ const options = {
 
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
-
-
-

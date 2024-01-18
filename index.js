@@ -6,15 +6,16 @@ let pass2 = document.getElementById("pass2");
 
 // Generate Password
 function generatePassword() {
-  let password1 = ''
+  let password1 = '';
   let password2 = '';
-  for(let i = 0; i < slider.value; i++) {
-    password1 += characters[Math.floor(Math.random() * characters.length)]
+  for (let i = 0; i < slider.value; i++) {
+    password1 += characters[Math.floor(Math.random() * characters.length)];
     password2 += characters[Math.floor(Math.random() * characters.length)];
   }
   pass1.textContent = password1;
   pass2.textContent = password2;
 }
+
 
 // Slider
 let slider = document.getElementById("myRange");
@@ -25,14 +26,36 @@ slider.oninput = function () {
   output.innerHTML = this.value;
 };
 
-// Copy generated password to clipboard
+// // Copy generated password to clipboard
+// function copyToClipboard(element) {
+//   var $temp = $("<input>");
+//   $("body").append($temp);
+//   $temp.val($(element).text()).select();
+//   document.execCommand("copy");
+//   $temp.remove();
+// }
+
 function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
+  // Create a new input element
+  var tempInput = document.createElement("input");
+
+  // Set the value of the input to the innerHTML of the specified element
+  tempInput.value = element.innerHTML;
+
+  // Append the input element to the body
+  document.body.appendChild(tempInput);
+
+  // Select the text inside the input element
+  tempInput.select();
+
+  // Copy the selected text to the clipboard
   document.execCommand("copy");
-  $temp.remove();
+
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
 }
+
+
 
 // Dark Mode
 const options = {
